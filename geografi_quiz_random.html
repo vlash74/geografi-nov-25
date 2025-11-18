@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geografi – Random-frågor</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background:#eef3ff;
+      margin:0;
+      padding:0;
+      color:#222;
+    }
+    header {
+      background:linear-gradient(135deg,#1565c0,#512da8);
+      color:white;
+      padding:24px;
+      text-align:center;
+    }
+    main {
+      max-width:960px;
+      margin:24px auto 40px;
+      padding:0 14px;
+    }
+    .card {
+      background:white;
+      border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      padding:18px 20px;
+      margin-bottom:20px;
+    }
+    h1 { margin:0 0 6px; }
+    h2 { margin:0 0 10px; color:#1565c0; }
+    p { line-height:1.6; }
+    .hint {
+      font-size:0.9rem;
+      color:#555;
+      margin-bottom:8px;
+    }
+    .question {
+      margin-bottom:14px;
+      padding-bottom:10px;
+      border-bottom:1px dashed #ddd;
+    }
+    .question-title {
+      font-weight:600;
+      margin-bottom:4px;
+    }
+    .options label {
+      display:block;
+      padding:4px 6px;
+      margin-bottom:4px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .options label:hover {
+      background:#f0f3ff;
+    }
+    .correct {
+      background:#c8e6c9 !important;
+    }
+    .incorrect {
+      background:#ffcdd2 !important;
+    }
+    button {
+      border:none;
+      border-radius:999px;
+      padding:8px 16px;
+      background:#3949ab;
+      color:white;
+      cursor:pointer;
+      margin-top:8px;
+      margin-right:6px;
+      font-weight:600;
+    }
+    button:hover {
+      background:#283593;
+    }
+    .score {
+      margin-top:8px;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎲 Geografi – Random-frågor</h1>
+  <p>En fråga i taget. Perfekt för korta pluggpass.</p>
+</header>
+
+<main>
+
+  <section class="card">
+    <p class="hint">
+      Klicka på <strong>“Ny fråga”</strong> för att få en slumpad fråga. Välj ett svar och klicka
+      sedan på <strong>“Rätta”</strong>. Kör några stycken när du har tråkigt – hjärnan tackar dig senare.
+    </p>
+  </section>
+
+  <section class="card">
+    <div id="question-container"></div>
+    <button onclick="checkRandom()">Rätta</button>
+    <button onclick="nextQuestion()">Ny fråga</button>
+    <div class="score" id="feedback"></div>
+  </section>
+
+</main>
+
+<script>
+const questions = [
+  // Några lätta frågor
+  {
+    title: "Vad betyder väder?",
+    correct: "a",
+    options: [
+      { text: "Hur det är i atmosfären just nu eller de närmaste dagarna", value: "a" },
+      { text: "Genomsnittligt väder under 30 år", value: "b" },
+      { text: "Klimatet vid polerna", value: "c" }
+    ]
+  },
+  {
+    title: "Vad betyder klimat?",
+    correct: "b",
+    options: [
+      { text: "Vädret en vecka", value: "a" },
+      { text: "Genomsnittligt väder under lång tid", value: "b" },
+      { text: "Bara temperaturen", value: "c" }
+    ]
+  },
+  {
+    title: "Vad är nederbörd?",
+    correct: "a",
+    options: [
+      { text: "Regn, snö, hagel", value: "a" },
+      { text: "Bara vind", value: "b" },
+      { text: "Bara temperatur", value: "c" }
+    ]
+  },
+  {
+    title: "Vad är ett kustklimat?",
+    correct: "b",
+    options: [
+      { text: "Stora temperaturskillnader mellan sommar och vinter", value: "a" },
+      { text: "Påverkat av havet → mildare vintrar och svalare somrar", value: "b" },
+      { text: "Finns bara vid ekvatorn", value: "c" }
+    ]
+  },
+
+  // Några medium-frågor
+  {
+    title: "Vad är monsun?",
+    correct: "b",
+    options: [
+      { text: "En orkan", value: "a" },
+      { text: "Årstidsvindar som byter riktning sommar/vinter", value: "b" },
+      { text: "En sorts havsström", value: "c" }
+    ]
+  },
+  {
+    title: "Vad betyder ordet ”termohalin” i termohalin cirkulation?",
+    correct: "a",
+    options: [
+      { text: "Värme och salt", value: "a" },
+      { text: "Växter och djur", value: "b" },
+      { text: "Luft och vatten", value: "c" }
+    ]
+  },
+  {
+    title: "Tempererat klimat kännetecknas av...",
+    correct: "b",
+    options: [
+      { text: "mycket varmt året runt", value: "a" },
+      { text: "fyra årstider och lagom temperatur", value: "b" },
+      { text: "is och tundra", value: "c" }
+    ]
+  },
+  {
+    title: "Vilken är INTE en klimatfaktor?",
+    correct: "c",
+    options: [
+      { text: "Breddgrad", value: "a" },
+      { text: "Höjd över havet", value: "b" },
+      { text: "Färg på husen", value: "c" }
+    ]
+  },
+  {
+    title: "Var finns permafrost?",
+    correct: "a",
+    options: [
+      { text: "Där marken är frusen året runt", value: "a" },
+      { text: "Bara i tropikerna", value: "b" },
+      { text: "Bara på havet", value: "c" }
+    ]
+  },
+
+  // Några extreme-frågor
+  {
+    title: "Varför får området kring ekvatorn mer solenergi än områden nära polerna?",
+    correct: "a",
+    options: [
+      { text: "Solen står mer rakt över ekvatorn så energin fördelas på en mindre yta", value: "a" },
+      { text: "Ekvatorn ligger närmare solen", value: "b" },
+      { text: "Atmosfären är tunnare vid ekvatorn", value: "c" }
+    ]
+  },
+  {
+    title: "Varför kan två platser på samma breddgrad ha olika klimat?",
+    correct: "a",
+    options: [
+      { text: "På grund av höjd över havet, havsströmmar och avstånd till hav", value: "a" },
+      { text: "För att solen bara lyser på en av dem", value: "b" },
+      { text: "För att den ena saknar atmosfär", value: "c" }
+    ]
+  },
+  {
+    title: "Hur hänger högtryck och lågtryck ihop med vindriktning?",
+    correct: "a",
+    options: [
+      { text: "Luft rör sig från högtryck till lågtryck vid marken", value: "a" },
+      { text: "Luft rör sig från lågtryck till högtryck", value: "b" },
+      { text: "Luft står stilla vid lågtryck", value: "c" }
+    ]
+  },
+  {
+    title: "Hur påverkar tinande permafrost klimatet ytterligare?",
+    correct: "a",
+    options: [
+      { text: "Metan frigörs → förstärker växthuseffekten", value: "a" },
+      { text: "Skapar mer ozon", value: "b" },
+      { text: "Stoppar alla havsströmmar", value: "c" }
+    ]
+  }
+];
+
+function renderQuestion(q) {
+  const container = document.getElementById('question-container');
+  let html = '<div class="question" data-correct="' + q.correct + '">';
+  html += '<div class="question-title">' + q.title + '</div>';
+  html += '<div class="options">';
+  q.options.forEach(opt => {
+    html += '<label><input type="radio" name="qr" value="' + opt.value + '"> ' + opt.text + '</label>';
+  });
+  html += '</div></div>';
+  container.innerHTML = html;
+  document.getElementById('feedback').textContent = '';
+}
+
+function nextQuestion() {
+  const idx = Math.floor(Math.random() * questions.length);
+  renderQuestion(questions[idx]);
+}
+
+function checkRandom() {
+  const container = document.querySelector('#question-container .question');
+  if (!container) return;
+  const correctVal = container.getAttribute('data-correct');
+  const labels = container.querySelectorAll('label');
+  labels.forEach(l => l.classList.remove('correct','incorrect'));
+  const checked = container.querySelector('input[type="radio"]:checked');
+  const feedback = document.getElementById('feedback');
+
+  if (!checked) {
+    feedback.textContent = 'Välj ett svar först.';
+    return;
+  }
+
+  if (checked.value === correctVal) {
+    checked.parentElement.classList.add('correct');
+    feedback.textContent = 'Rätt! 👌';
+  } else {
+    checked.parentElement.classList.add('incorrect');
+    labels.forEach(l => {
+      const inp = l.querySelector('input');
+      if (inp && inp.value === correctVal) {
+        l.classList.add('correct');
+      }
+    });
+    feedback.textContent = 'Inte helt rätt – men nu ser du det rätta svaret.';
+  }
+}
+
+// Starta direkt med en fråga
+nextQuestion();
+</script>
+
+</body>
+</html>
