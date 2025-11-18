@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geografi – Quiz LÄTT</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background:#eef3ff;
+      margin:0;
+      padding:0;
+      color:#222;
+    }
+    header {
+      background:linear-gradient(135deg,#1565c0,#512da8);
+      color:white;
+      padding:24px;
+      text-align:center;
+    }
+    main {
+      max-width:960px;
+      margin:24px auto 40px;
+      padding:0 14px;
+    }
+    .card {
+      background:white;
+      border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      padding:18px 20px;
+      margin-bottom:20px;
+    }
+    h1 { margin:0 0 6px; }
+    h2 { margin:0 0 10px; color:#1565c0; }
+    p { line-height:1.6; }
+    .hint {
+      font-size:0.9rem;
+      color:#555;
+      margin-bottom:8px;
+    }
+    .question {
+      margin-bottom:14px;
+      padding-bottom:10px;
+      border-bottom:1px dashed #ddd;
+    }
+    .question-title {
+      font-weight:600;
+      margin-bottom:4px;
+    }
+    .options label {
+      display:block;
+      padding:4px 6px;
+      margin-bottom:4px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .options label:hover {
+      background:#f0f3ff;
+    }
+    .correct {
+      background:#c8e6c9 !important;
+    }
+    .incorrect {
+      background:#ffcdd2 !important;
+    }
+    button {
+      border:none;
+      border-radius:999px;
+      padding:8px 16px;
+      background:#3949ab;
+      color:white;
+      cursor:pointer;
+      margin-top:8px;
+      font-weight:600;
+    }
+    button:hover {
+      background:#283593;
+    }
+    .score {
+      margin-top:8px;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎮 Geografi – Quiz LÄTT</h1>
+  <p>Grundfrågor om väder, klimat, nederbörd, vindar och klimattyper.</p>
+</header>
+
+<main>
+
+  <section class="card">
+    <p class="hint">
+      Markera ett svar per fråga och klicka sedan på <strong>“Rätta quizet”</strong>. Det är helt okej att gissa – det är så man lär sig.
+    </p>
+  </section>
+
+  <!-- Fråga 1 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">1. Vad betyder väder?</div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Hur det är i atmosfären just nu eller de närmaste dagarna</label>
+        <label><input type="radio" name="q1" value="b"> Genomsnittligt väder under 30 år</label>
+        <label><input type="radio" name="q1" value="c"> Klimatet vid polerna</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 2 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">2. Vad betyder klimat?</div>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> Vädret en vecka</label>
+        <label><input type="radio" name="q2" value="b"> Genomsnittligt väder under lång tid</label>
+        <label><input type="radio" name="q2" value="c"> Bara temperaturen</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 3 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">3. Varför är det varmt vid ekvatorn?</div>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> Solen står högt och strålar mer rakt där</label>
+        <label><input type="radio" name="q3" value="b"> Det är närmast månen</label>
+        <label><input type="radio" name="q3" value="c"> Det finns flest vulkaner där</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 4 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">4. Vad är ekvatorn?</div>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> En linje genom Nordpolen</label>
+        <label><input type="radio" name="q4" value="b"> En linje som delar jorden i nord och syd</label>
+        <label><input type="radio" name="q4" value="c"> Gränsen för polarnatt</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 5 -->
+  <section class="card">
+    <div class="question" data-correct="c">
+      <div class="question-title">5. Vad menas med årstid?</div>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> Att vädret ändrar sig lite varje dag</label>
+        <label><input type="radio" name="q5" value="b"> Att jorden byter bana runt solen</label>
+        <label><input type="radio" name="q5" value="c"> Perioder under året med typiskt väder (vår, sommar, höst, vinter)</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 6 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">6. Vad är en polcirkel?</div>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a"> En linje där solen aldrig syns</label>
+        <label><input type="radio" name="q6" value="b"> En gräns där det kan vara midnattssol eller polarnatt</label>
+        <label><input type="radio" name="q6" value="c"> En linje vid ekvatorn</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 7 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">7. Vad gör ozonlagret?</div>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a"> Ger oss regn</label>
+        <label><input type="radio" name="q7" value="b"> Skyddar mot solens UV-strålning</label>
+        <label><input type="radio" name="q7" value="c"> Skapar vindar</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 8 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">8. Vad är den naturliga växthuseffekten?</div>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a"> När all värme försvinner ut i rymden</label>
+        <label><input type="radio" name="q8" value="b"> När växthusgaser håller kvar lagom mycket värme</label>
+        <label><input type="radio" name="q8" value="c"> När ozonet förstörs</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 9 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">9. Vad händer vid förstärkt växthuseffekt?</div>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a"> Det blir kallare på jorden</label>
+        <label><input type="radio" name="q9" value="b"> Mer värme stannar kvar → klimatet förändras</label>
+        <label><input type="radio" name="q9" value="c"> Ozonlagret blir tjockare</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 10 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">10. Vad är nederbörd?</div>
+      <div class="options">
+        <label><input type="radio" name="q10" value="a"> Regn, snö, hagel</label>
+        <label><input type="radio" name="q10" value="b"> Bara vind</label>
+        <label><input type="radio" name="q10" value="c"> Bara temperatur</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 11 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">11. Vattnets kretslopp – vad är rätt?</div>
+      <div class="options">
+        <label><input type="radio" name="q11" value="a"> Vatten försvinner när det regnar</label>
+        <label><input type="radio" name="q11" value="b"> Vatten avdunstar, blir moln och faller som nederbörd</label>
+        <label><input type="radio" name="q11" value="c"> Vatten går bara från hav till moln</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 12 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">12. Vad är orografisk nederbörd?</div>
+      <div class="options">
+        <label><input type="radio" name="q12" value="a"> Regn när fuktig luft tvingas upp över ett berg</label>
+        <label><input type="radio" name="q12" value="b"> Regn vid havet</label>
+        <label><input type="radio" name="q12" value="c"> Snö på vintern</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 13 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">13. Vad är konvektiv nederbörd?</div>
+      <div class="options">
+        <label><input type="radio" name="q13" value="a"> Regn när varm luft stiger upp från marken</label>
+        <label><input type="radio" name="q13" value="b"> Regn vid en front</label>
+        <label><input type="radio" name="q13" value="c"> Regn över berg</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 14 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">14. Vad är frontnederbörd?</div>
+      <div class="options">
+        <label><input type="radio" name="q14" value="a"> Regn i öknen</label>
+        <label><input type="radio" name="q14" value="b"> Regn när varm och kall luft möts</label>
+        <label><input type="radio" name="q14" value="c"> Regn bara i tropikerna</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 15 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">15. Vind uppstår när...</div>
+      <div class="options">
+        <label><input type="radio" name="q15" value="a"> luft rör sig från lågtryck till högtryck</label>
+        <label><input type="radio" name="q15" value="b"> luft rör sig från högtryck till lågtryck</label>
+        <label><input type="radio" name="q15" value="c"> det är varmt</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 16 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">16. Sjöbris är...</div>
+      <div class="options">
+        <label><input type="radio" name="q16" value="a"> vind från land till hav mitt på dagen</label>
+        <label><input type="radio" name="q16" value="b"> vind från hav till land på dagen</label>
+        <label><input type="radio" name="q16" value="c"> vind bara på vintern</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 17 -->
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">17. Landbris är...</div>
+      <div class="options">
+        <label><input type="radio" name="q17" value="a"> vind från land till hav på kvällen/natten</label>
+        <label><input type="radio" name="q17" value="b"> vind från hav till land på natten</label>
+        <label><input type="radio" name="q17" value="c"> samma som monsun</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 18 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">18. Vad är en havsström?</div>
+      <div class="options">
+        <label><input type="radio" name="q18" value="a"> En flod på land</label>
+        <label><input type="radio" name="q18" value="b"> En stor rörelse av vatten i havet</label>
+        <label><input type="radio" name="q18" value="c"> En sorts vind</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 19 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">19. Vad är ett kustklimat?</div>
+      <div class="options">
+        <label><input type="radio" name="q19" value="a"> Stora temperaturskillnader mellan sommar och vinter</label>
+        <label><input type="radio" name="q19" value="b"> Påverkat av havet → mildare vintrar och svalare somrar</label>
+        <label><input type="radio" name="q19" value="c"> Finns bara vid ekvatorn</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fråga 20 -->
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">20. Vad är ett inlandsklimat?</div>
+      <div class="options">
+        <label><input type="radio" name="q20" value="a"> Påverkat av havet</label>
+        <label><input type="radio" name="q20" value="b"> Påverkat av land → kalla vintrar och varma somrar</label>
+        <label><input type="radio" name="q20" value="c"> Bara nära polerna</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resultat -->
+  <section class="card">
+    <h2>Resultat</h2>
+    <button onclick="checkAll()">Rätta quizet</button>
+    <div class="score" id="score-total"></div>
+  </section>
+
+</main>
+
+<script>
+function checkAll() {
+  const qs = document.querySelectorAll('.question');
+  let total = qs.length;
+  let correct = 0;
+  qs.forEach(q => {
+    const correctVal = q.getAttribute('data-correct');
+    const labels = q.querySelectorAll('label');
+    labels.forEach(l => l.classList.remove('correct','incorrect'));
+    const checked = q.querySelector('input[type="radio"]:checked');
+    if (checked) {
+      if (checked.value === correctVal) {
+        correct++;
+        checked.parentElement.classList.add('correct');
+      } else {
+        checked.parentElement.classList.add('incorrect');
+        labels.forEach(l => {
+          const inp = l.querySelector('input');
+          if (inp && inp.value === correctVal) {
+            l.classList.add('correct');
+          }
+        });
+      }
+    }
+  });
+  document.getElementById('score-total').textContent = "Totalt rätt: " + correct + " av " + total;
+}
+</script>
+
+</body>
+</html>
