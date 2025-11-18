@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <title>Geografi – Quiz EXTREME</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background:#eef3ff;
+      margin:0;
+      padding:0;
+      color:#222;
+    }
+    header {
+      background:linear-gradient(135deg,#4a148c,#880e4f);
+      color:white;
+      padding:26px;
+      text-align:center;
+    }
+    main {
+      max-width:960px;
+      margin:24px auto 40px;
+      padding:0 14px;
+    }
+    .card {
+      background:white;
+      border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      padding:18px 20px;
+      margin-bottom:20px;
+    }
+    h1 { margin:0 0 6px; }
+    h2 { margin:0 0 10px; color:#4a148c; }
+    p { line-height:1.6; }
+    .hint {
+      font-size:0.9rem;
+      color:#555;
+      margin-bottom:8px;
+    }
+    .question {
+      margin-bottom:14px;
+      padding-bottom:10px;
+      border-bottom:1px dashed #ddd;
+    }
+    .question-title {
+      font-weight:600;
+      margin-bottom:4px;
+    }
+    .options label {
+      display:block;
+      padding:4px 6px;
+      margin-bottom:4px;
+      border-radius:6px;
+      cursor:pointer;
+    }
+    .options label:hover {
+      background:#f0f3ff;
+    }
+    .correct {
+      background:#c8e6c9 !important;
+    }
+    .incorrect {
+      background:#ffcdd2 !important;
+    }
+    button {
+      border:none;
+      border-radius:999px;
+      padding:8px 16px;
+      background:#6a1b9a;
+      color:white;
+      cursor:pointer;
+      margin-top:8px;
+      font-weight:600;
+    }
+    button:hover {
+      background:#4a148c;
+    }
+    .score {
+      margin-top:8px;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>💀 Geografi – Quiz EXTREME</h1>
+  <p>Svårare frågor som liknar resonemangsfrågor på provet.</p>
+</header>
+
+<main>
+
+  <section class="card">
+    <p class="hint">
+      Här krävs ofta <strong>förståelse</strong> och inte bara fakta. Tänk: <em>Varför?</em>
+    </p>
+  </section>
+
+  <!-- Questions start -->
+  
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">1. Varför får området kring ekvatorn mer solenergi än områden nära polerna?</div>
+      <div class="options">
+        <label><input type="radio" name="q1" value="a"> Solen står mer rakt över ekvatorn så energin fördelas på en mindre yta</label>
+        <label><input type="radio" name="q1" value="b"> Ekvatorn ligger närmare solen</label>
+        <label><input type="radio" name="q1" value="c"> Atmosfären är tunnare vid ekvatorn</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">2. Vad förklarar bäst varför vi har årstider?</div>
+      <div class="options">
+        <label><input type="radio" name="q2" value="a"> Jordens lutning i förhållande till solens strålar</label>
+        <label><input type="radio" name="q2" value="b"> Att jorden ibland står stilla</label>
+        <label><input type="radio" name="q2" value="c"> Att avståndet till solen ändras kraftigt</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">3. Varför är det ofta torrt på läsidan av höga bergskedjor?</div>
+      <div class="options">
+        <label><input type="radio" name="q3" value="a"> Luften har redan släppt ifrån sig sin fukt på vindsidan</label>
+        <label><input type="radio" name="q3" value="b"> Det regnar mer där</label>
+        <label><input type="radio" name="q3" value="c"> Havsströmmar stoppar allt regn</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">4. Vilken kombination beskriver orografisk nederbörd bäst?</div>
+      <div class="options">
+        <label><input type="radio" name="q4" value="a"> Vind → fuktig luft tvingas upp → kyls → moln → regn</label>
+        <label><input type="radio" name="q4" value="b"> Sol → mark värms → moln → åska</label>
+        <label><input type="radio" name="q4" value="c"> Front → varm luft stiger → hagel</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">5. Hur kan förändringar i termohalin cirkulation påverka klimatet i Europa?</div>
+      <div class="options">
+        <label><input type="radio" name="q5" value="a"> En försvagad cirkulation kan göra Nordvästeuropa kallare</label>
+        <label><input type="radio" name="q5" value="b"> Europa blir alltid varmare</label>
+        <label><input type="radio" name="q5" value="c"> Europa påverkas inte alls</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">6. Varför ger förstärkt växthuseffekt mer extremväder?</div>
+      <div class="options">
+        <label><input type="radio" name="q6" value="a"> Mer energi i atmosfären ger kraftigare lågtryck, värmeböljor och skyfall</label>
+        <label><input type="radio" name="q6" value="b"> Den tar bort alla moln</label>
+        <label><input type="radio" name="q6" value="c"> Den stoppar all nederbörd</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">7. Skillnaden mellan kustklimat och inlandsklimat förklaras bäst av...</div>
+      <div class="options">
+        <label><input type="radio" name="q7" value="a"> Havet lagrar värme, land värms/kyls snabbt</label>
+        <label><input type="radio" name="q7" value="b"> Kustklimat finns bara vid ekvatorn</label>
+        <label><input type="radio" name="q7" value="c"> Kustklimat har alltid snö</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">8. Varför kan två platser på samma breddgrad ha olika klimat?</div>
+      <div class="options">
+        <label><input type="radio" name="q8" value="a"> Höjd över havet, havsströmmar och avstånd till hav</label>
+        <label><input type="radio" name="q8" value="b"> Solen lyser bara på en av dem</label>
+        <label><input type="radio" name="q8" value="c"> En av dem saknar atmosfär</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">9. Vad är monsunens betydelse för människors livsmiljöer?</div>
+      <div class="options">
+        <label><input type="radio" name="q9" value="a"> Den styr regnperioder och torka → påverkar jordbruk och vatten</label>
+        <label><input type="radio" name="q9" value="b"> Den skapar vulkaner</label>
+        <label><input type="radio" name="q9" value="c"> Den finns bara på havet</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">10. Vilken mening beskriver bäst tropisk regnskog?</div>
+      <div class="options">
+        <label><input type="radio" name="q10" value="a"> Hög temperatur, mycket regn, stor artrikedom</label>
+        <label><input type="radio" name="q10" value="b"> Kallt, permafrost, lite växter</label>
+        <label><input type="radio" name="q10" value="c"> Nästan ingen nederbörd</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="b">
+      <div class="question-title">11. Vad är en konsekvens av avskogning i tropiska områden?</div>
+      <div class="options">
+        <label><input type="radio" name="q11" value="a"> Mindre koldioxid i atmosfären</label>
+        <label><input type="radio" name="q11" value="b"> Mer koldioxid och förändrat lokalt klimat</label>
+        <label><input type="radio" name="q11" value="c"> Fler havsströmmar</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">12. Varför ligger många öknar runt 30° breddgrad?</div>
+      <div class="options">
+        <label><input type="radio" name="q12" value="a"> Där sjunker torr luft ner i högtrycksområden</label>
+        <label><input type="radio" name="q12" value="b"> Havsströmmarna är alltid kalla där</label>
+        <label><input type="radio" name="q12" value="c"> Ozonlagret saknas där</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">13. Hur hänger högtryck och lågtryck ihop med vindriktning?</div>
+      <div class="options">
+        <label><input type="radio" name="q13" value="a"> Luft rör sig från högtryck till lågtryck vid marken</label>
+        <label><input type="radio" name="q13" value="b"> Luft rör sig från lågtryck till högtryck</label>
+        <label><input type="radio" name="q13" value="c"> Luft står stilla vid lågtryck</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">14. Vilken är den bästa beskrivningen av en savann?</div>
+      <div class="options">
+        <label><input type="radio" name="q14" value="a"> Gräsmarker med enstaka träd, tydlig regn- och torrperiod</label>
+        <label><input type="radio" name="q14" value="b"> Tät barrskog</label>
+        <label><input type="radio" name="q14" value="c"> Område med permafrost</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">15. Hur påverkar tinande permafrost klimatet ytterligare?</div>
+      <div class="options">
+        <label><input type="radio" name="q15" value="a"> Metan frigörs → förstärker växthuseffekten</label>
+        <label><input type="radio" name="q15" value="b"> Skapar mer ozon</label>
+        <label><input type="radio" name="q15" value="c"> Stoppar alla havsströmmar</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">16. Vilken livsmiljö är mest känslig för små förändringar i temperatur och havsnivå?</div>
+      <div class="options">
+        <label><input type="radio" name="q16" value="a"> Korallrev</label>
+        <label><input type="radio" name="q16" value="b"> Tundra</label>
+        <label><input type="radio" name="q16" value="c"> Öken</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">17. Vad är en klimatflykting?</div>
+      <div class="options">
+        <label><input type="radio" name="q17" value="a"> En person som flyttar p.g.a. klimatförändringar</label>
+        <label><input type="radio" name="q17" value="b"> En turist som jagar sol</label>
+        <label><input type="radio" name="q17" value="c"> En person som flyttar för att det regnade en vecka</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">18. Hur anpassar människor sig till klimatet?</div>
+      <div class="options">
+        <label><input type="radio" name="q18" value="a"> Bygger hus på pålar i områden med översvämningsrisk</label>
+        <label><input type="radio" name="q18" value="b"> Ignorerar vädervarningar</label>
+        <label><input type="radio" name="q18" value="c"> Odlar samma grödor överallt</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">19. Hur påverkar människor klimatet mest?</div>
+      <div class="options">
+        <label><input type="radio" name="q19" value="a"> Genom att elda fossila bränslen</label>
+        <label><input type="radio" name="q19" value="b"> Genom att cykla</label>
+        <label><input type="radio" name="q19" value="c"> Genom att andas</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="question" data-correct="a">
+      <div class="question-title">20. Hur kan havsnivåhöjning påverka livsmiljöer?</div>
+      <div class="options">
+        <label><input type="radio" name="q20" value="a"> Kuststäder kan översvämmas, jordbruksmark förstöras av saltvatten</label>
+        <label><input type="radio" name="q20" value="b"> Inget händer</label>
+        <label><input type="radio" name="q20" value="c"> Öknar blir större direkt</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Resultat</h2>
+    <button onclick="checkAll()">Rätta quizet</button>
+    <div id="score-total" class="score"></div>
+  </section>
+
+</main>
+
+<script>
+function checkAll() {
+  const qs = document.querySelectorAll('.question');
+  let total = qs.length;
+  let correct = 0;
+  qs.forEach(q => {
+    const labels = q.querySelectorAll('label');
+    labels.forEach(l => l.classList.remove('correct','incorrect'));
+    const correctVal = q.getAttribute('data-correct');
+    const checked = q.querySelector('input[type="radio"]:checked');
+
+    if (checked) {
+      if (checked.value === correctVal) {
+        correct++;
+        checked.parentElement.classList.add('correct');
+      } else {
+        checked.parentElement.classList.add('incorrect');
+        labels.forEach(l => {
+          const input = l.querySelector('input');
+          if (input.value === correctVal) l.classList.add('correct');
+        });
+      }
+    }
+  });
+
+  document.getElementById('score-total').textContent =
+    "Totalt rätt: " + correct + " av " + total;
+}
+</script>
+
+</body>
+</html>
